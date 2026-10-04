@@ -1,6 +1,5 @@
 # Function-Preserving Data Generation for Zero-Shot Real-to-Sim-to-Real Manipulation
 
-[![Paper](https://img.shields.io/badge/arXiv-2609.18293-b31b1b.svg)](https://arxiv.org/abs/2609.18293)
 [![Project page](https://img.shields.io/badge/Project-Website-2ea44f.svg)](https://fpsa-r2s2r.github.io/)
 [![Python](https://img.shields.io/badge/Python-3.9-blue.svg)](#installation)
 
@@ -10,7 +9,7 @@ FPSA is a Real-to-Sim-to-Real framework for generating geometrically diverse, ph
 
 The paper evaluates four tasks—object pick-up, wrench-based screw fastening, assembly, and single-gear extraction.
 
-**Links:** [paper](https://arxiv.org/abs/2609.18293) · [project page](https://fpsa-r2s2r.github.io/) · [FPSA module documentation](FPSA/README.md)
+**Links:** [project page](https://fpsa-r2s2r.github.io/) · [FPSA module documentation](FPSA/README.md)
 
 
 ## Highlights
@@ -258,16 +257,4 @@ python tests/test_fpsa_memory.py
 
 The PyBullet EGL plugin has its own texture-replacement and Panda URDF smoke tests; they run automatically during `build_plugin.sh` and can also be invoked from [`pybullet-egl-patch`](pybullet-egl-patch/README.md#tests).
 
-## Citation
-
-If this repository is useful in your research, please cite:
-
-```bibtex
-@article{xiang2026function,
-  title   = {Function-Preserving Data Generation for Zero-Shot Real-to-Sim-to-Real Manipulation},
-  author  = {Xiang, Tianyi and Xie, Xupeng and Cao, Jiahang and Luo, Andrew F. and Li, Haoang and Ma, Jun},
-  journal = {arXiv preprint arXiv:2609.18293},
-  year    = {2026}
-}
-```
 
