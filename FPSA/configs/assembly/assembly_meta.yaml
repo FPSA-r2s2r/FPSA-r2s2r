@@ -1,0 +1,35 @@
+object:
+  obj_path: ./data/objects/assembly/tool/tool.obj
+  initial_grasp_path: ./data/objects/assembly/tool/tool_grasp.yaml
+  name: tool
+
+sampler:
+  max_workers: 20
+  labels: [chain_x_and_slippage, ARAP_x_streching, slippage_y_streching]
+  linspace_points_per_stage: 15
+
+output:
+  root: ./data/objects/assembly/tool/fpsa_aug_outputs
+  overwrite: true
+
+deformations:
+  - label: chain_x_and_slippage
+    chain: ARAP_x_streching, slippage_y_streching
+    
+  - label: ARAP_x_streching
+    method: ARAP
+    constrained_ids: &assembly_constraints [17, 15, 19, 13, 208, 164, 105, 106, 107, 108, 103, 118, 119,
+      120, 121, 122, 128, 78, 93, 92, 91, 90, 89, 88, 123, 18, 16, 14, 12, 81, 82,
+      111, 112, 109, 101, 102, 100, 85, 285, 115, 117, 116, 75, 77, 76, 10, 21, 20,
+      126, 66, 39, 184, 173, 48, 46, 45, 6, 149, 148, 147, 57, 40, 41, 28, 29, 1,
+      169, 165, 26, 51, 191, 273, 281, 278, 262, 4, 5, 52, 9, 11, 23, 22, 71, 72,
+      73, 133, 134, 135, 355, 354]
+    reshaped_ids: &assembly_handles [9, 11, 23, 22, 71, 72, 73, 133, 134, 135, 355, 354]
+    reshaped_vector: [1.0, 0.0, 0.0]
+    range: [-0.04, 0.04]
+    
+  - label: slippage_y_streching
+    constrained_ids: *assembly_constraints
+    reshaped_ids: *assembly_handles
+    reshaped_vector: [0.0, 1.0, 0.0]
+    range: [-0.04, 0.03]

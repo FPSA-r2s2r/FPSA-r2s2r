@@ -1,0 +1,53 @@
+object:
+  name: bracket
+  obj_path: ./data/objects/bracket/bracket.obj
+  initial_grasp_path: ./data/objects/bracket/bracket_grasp.yaml
+
+output:
+  root: ./data/objects/bracket/fpsa_aug_outputs
+  overwrite: True
+
+solver:
+  max_iters: 70
+  k_ring: 1
+
+sampler:
+  max_workers: 20
+  labels: [bracket_x_stretch, bracket_y_stretch, bracket_symetric_stretch_annot]
+  linspace_points_per_stage: 70
+
+deformations:
+  - label: bracket_x_stretch
+    constrained_ids: [346, 339, 343, 345, 330, 337, 344, 329, 1116, 1114, 835, 378, 406, 846]
+    reshaped_ids: [835, 378, 406, 846]
+    reshaped_vector:
+      - [-1.0, 0.0, 0.0]
+      - [-1.0, 0.0, 0.0]
+      - [1.0, 0.0, 0.0]
+      - [1.0, 0.0, 0.0]
+    range: [-0.03, 0.08]
+
+  - label: bracket_y_stretch
+    constrained_ids: [339, 346, 343, 345, 966, 1002, 347, 341, 973, 340, 843, 848,
+      315, 18, 17, 47]
+    reshaped_ids: [843, 848, 315, 18, 17, 47]
+    reshaped_vector:
+      - [0.0, -1.0, 0.0]
+      - [0.0, -1.0, 0.0]
+      - [0.0, -1.0, 0.0]
+      - [0.0, 1.0, 0.0]
+      - [0.0, 1.0, 0.0]
+      - [0.0, 1.0, 0.0]
+    range: [-0.035, 0.06]
+
+
+  - label: bracket_symetric_stretch_annot
+    constrained_ids: [339, 346, 1114, 343, 345, 333, 340, 341, 1017, 330, 344, 313,
+      318, 44, 15]
+    reshaped_ids: [313, 318, 44, 15]
+    reshaped_vector:
+      - [-0.7071067811865476, -0.7071067811865476, 0.0]
+      - [0.7071067811865476, -0.7071067811865476, 0.0]
+      - [0.7071067811865476, 0.7071067811865476, 0.0]
+      - [-0.7071067811865476, 0.7071067811865476, 0.0]
+    range: [-0.035, 0.06]

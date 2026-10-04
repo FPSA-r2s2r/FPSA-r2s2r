@@ -1,0 +1,18 @@
+# Dependencies used by FPSA data conversion, Diffusion Policy training, and
+# simulation rollouts. Install the CUDA-matched torch/torchvision wheels first;
+# see README.md. This file intentionally extends the core requirements.
+-r requirements.txt
+
+hydra-core==1.2.0
+omegaconf==2.3.0
+diffusers==0.18.2
+huggingface-hub==0.25.2
+einops==0.8.2
+dill==0.4.1
+wandb>=0.13,<0.26
+zarr==2.12.0
+numcodecs==0.10.2
+numba==0.58.1
+pandas>=2.0,<2.4
+av>=10,<16
+filelock>=3.12,<4

@@ -1,0 +1,125 @@
+simulation: Sim_GearHorizon
+sim_init:
+  use_egl: true
+  offset: [0.0, 0.0, 0.0]
+  randomize_initial_ee_pose: true
+demo:
+  seed: 46
+  time_step: 1 / 120
+  record_every_n_sim_steps: 12
+  max_steps: 0
+  sleep_seconds: 0.0
+mp_collect:
+  output_root: /mnt/storage/FPSA_data/task_gear_horizon/
+  num_episodes: 3000
+  num_processes: 10
+  base_seed: 43
+  time_step: 1 / 120
+  fps: 10
+  max_steps: 2000
+  record_every_n_sim_steps: 12
+  restart_every: 1
+make_scene:
+  env_mesh_path: ./data/background/repaired_table/tabletop.obj
+  gear_assets:
+  - name: golden_lower
+    visual_path: ./data/objects/gear_extraction/gear/long_horizon/golden_lower/gear.obj
+    collision_path: ./data/objects/gear_extraction/gear/long_horizon/golden_lower/gear_coacd.obj
+    grasp_path: ./data/objects/gear_extraction/gear/long_horizon/golden_lower/grasp.yaml
+  - name: green_middle
+    visual_path: ./data/objects/gear_extraction/gear/long_horizon/green_middle/gear.obj
+    collision_path: ./data/objects/gear_extraction/gear/long_horizon/green_middle/gear_coacd.obj
+    grasp_path: ./data/objects/gear_extraction/gear/long_horizon/green_middle/grasp.yaml
+  - name: red_upper
+    visual_path: ./data/objects/gear_extraction/gear/long_horizon/red_upper/gear.obj
+    collision_path: ./data/objects/gear_extraction/gear/long_horizon/red_upper/gear_coacd.obj
+    grasp_path: ./data/objects/gear_extraction/gear/long_horizon/red_upper/grasp.yaml
+  supportor_path: ./data/objects/gear_extraction/supportor/supportor.obj
+  supportor_collision_path: null
+  scenario: null
+  scenario_probabilities:
+  - 0.3333333333333333
+  - 0.3333333333333333
+  - 0.3333333333333333
+  gear_stack_spacing: 0.007
+  supportor_pose_base:
+  - 0.62
+  - 0.1
+  - 0.015
+  supportor_euler_base:
+  - 0.0
+  - 0.0
+  - 0.0
+  gear_to_support_pos:
+  - 0.0
+  - 0.0
+  - 0.31
+  gear_to_support_euler:
+  - 0.0
+  - 3.141592653589793
+  - 3.141592653589793
+  support_to_place_pos:
+  - -0.2
+  - 0.0
+  - 0.1
+  support_to_place_euler: null
+  randomize_task_pose: true
+  task_x_jit: 0.1
+  task_y_jit: 0.06
+  task_z_jit: 0.03
+  task_yaw_jit: 0.0
+  safe_approach: 0.03
+  lift_height: 0.03
+  place_approach_height: 0.04
+  retreat_height: 0.0
+  randomize_lighting: true
+  randomize_outlscene: true
+  outlscene_xyz_jit: 0.015
+  outlscene_eul_jit: 0.001
+  randomize_plane_height: true
+  plane_height_jit: 0.003
+  randomize_campose: true
+  cam_xyz_jit: 0.01
+  cam_eul_jit: 0.005
+  randomize_fisheye_cam: true
+  fisheye_eyz_jit: 0.005
+  fisheye_eul_jit: 0.002
+  randomize_camera_intrinsic: true
+  randomize_image_noise: true
+  randomize_object_color: true
+  randomize_robot_texture: true
+  robot_texture_patterns:
+  - checkers
+  - gradient
+  - noise
+  - plain
+  object_color_mode: bounded
+  object_color_strength: 0.5
+  randomize_distractors: true
+  distractor_root: /mnt/storage/GoogleScannedObjects
+  distractor_num_range:
+  - 0
+  - 5
+  distractor_target_size_range:
+  - 0.1
+  - 0.5
+  distractor_workspace:
+  - - -0.2
+    - 1.3
+  - - -0.72
+    - 0.42
+  distractor_clearance: 0.07
+  distractor_path_clearance: 0.07
+  distractor_min_target_mask_pixels: 10
+  fix_gear_to_gripper: true
+  randomize_object_in_hand_pose: true
+  object_in_hand_x_jit: 0.002
+  object_in_hand_y_jit: 0.002
+  object_in_hand_z_jit: 0.002
+  object_in_hand_roll_jit: 0.002
+  object_in_hand_pitch_jit: 0.002
+  object_in_hand_yaw_jit: 0.002
+  object_in_hand_debug: false
+collect_observation:
+  direct: false
+  use_eye_in_hand: true

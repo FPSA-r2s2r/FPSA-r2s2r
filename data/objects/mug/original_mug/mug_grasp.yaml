@@ -1,0 +1,61 @@
+mesh_path: /home/iadc/GeoBridge/data/objects/mug/original_mug/model.obj
+reference_frame: mesh_local_frame
+hand_frame: panda_hand
+position_m:
+  x: 0.014792400747537616
+  y: -0.046731248572468756
+  z: 0.20069021833291115
+quaternion_xyzw:
+  x: 1.0
+  y: 0.0
+  z: 0.0
+  w: 6.123233995736766e-17
+rpy_rad:
+  r: 3.141592653589793
+  p: -0.0
+  y: 0.0
+rpy_deg:
+  r: 180.0
+  p: -0.0
+  y: 0.0
+opening_width_m: 0.04
+finger_joint_m: 0.02
+pregrasp_opening_width_m: 0.06
+hand_tcp_offset_m:
+  x: 0.0
+  y: 0.0
+  z: 0.1034
+T_mesh_hand:
+- - 1.0
+  - 0.0
+  - 0.0
+  - 0.014792401
+- - 0.0
+  - -1.0
+  - -0.0
+  - -0.046731249
+- - 0.0
+  - 0.0
+  - -1.0
+  - 0.200690218
+- - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+T_mesh_hand_tcp:
+- - 1.0
+  - 0.0
+  - 0.0
+  - 0.014792401
+- - 0.0
+  - -1.0
+  - -0.0
+  - -0.046731249
+- - 0.0
+  - 0.0
+  - -1.0
+  - 0.097290218
+- - 0.0
+  - 0.0
+  - 0.0
+  - 1.0

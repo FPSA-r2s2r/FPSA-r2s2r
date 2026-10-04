@@ -1,0 +1,37 @@
+object:
+  obj_path: ./data/objects/gear_extraction/gear/gear.obj
+  initial_grasp_path: ./data/objects/gear_extraction/gear/grasp.yaml
+  name: gear
+
+solver:
+  max_iters: 50
+  vertex_solve_params:
+    bc_weight: 10000000.0
+
+sampler:
+  max_workers: 24
+  labels: [gear_streching]
+  linspace_points_per_stage: 60
+
+output:
+  root: ./data/objects/gear_extraction/gear/fpsa_aug_outputs
+  overwrite: true
+
+
+deformations:
+  - label: gear_streching
+    constrained_ids: [260, 257, 5437, 255, 469, 468, 467, 466, 464, 462, 459, 455,
+      453, 450, 447, 275, 272, 269, 265, 263, 267, 1, 451, 452, 460, 461, 465, 258,
+      259, 254, 270, 271, 273, 274, 276, 644, 648, 5463, 5405, 5454, 5416, 5320, 5170,
+      5359, 5184, 5219, 5261, 5289, 5334]
+    reshaped_ids: [5320, 5170, 5359, 5184, 5219, 5261, 5289, 5334]
+    reshaped_vector:
+      - [0.0, -1.0, 0.0]
+      - [0.0, 1.0, 0.0]
+      - [-1.0, 0.0, 0.0]
+      - [1.0, 0.0, 0.0]
+      - [0.7071067811865476, 0.7071067811865476, 0.0]
+      - [0.7071067811865476, -0.7071067811865476, 0.0]
+      - [-0.7071067811865476, -0.7071067811865476, 0.0]
+      - [-0.7071067811865476, 0.7071067811865476, 0.0]
+    range: [-0.03, 0.10]

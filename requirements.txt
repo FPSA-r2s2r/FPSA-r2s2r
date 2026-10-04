@@ -1,0 +1,18 @@
+# Core FPSA, asset-generation, and PyBullet simulation dependencies.
+# Tested with CPython 3.9 on Linux x86-64. PyTorch is installed separately
+# because the correct wheel depends on the host CUDA configuration.
+numpy==1.26.4
+scipy==1.11.4
+PyYAML>=6.0,<7
+tqdm>=4.64,<5
+Pillow>=9.4,<12
+opencv-python>=4.8,<4.12
+imageio>=2.22,<3
+imageio-ffmpeg>=0.4.8,<0.7
+pybullet==3.2.7
+gym==0.21.0
+trimesh>=4.0,<5
+open3d==0.19.0
+libigl==2.6.2
+coacd==1.0.7
+icecream>=2.1,<3

@@ -1,0 +1,7 @@
+# Robot-side NUC (franka_server.py)
+zerorpc
+numpy
+scipy
+torch
+polymetis
+panda-python

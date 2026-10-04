@@ -1,0 +1,26 @@
+# Data
+data/outputs
+data/DP_data/
+data/background/recon_background_raw.ply
+data/background/recon_background_simplied.ply
+fpsa_aug_outputs
+franka_standalone/collected_data/
+
+# Checkpoints / large model artifacts
+*.ckpt
+*.pth
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Debug / scratch artifacts
+imagedebug.jpg
+temp_rgb*.png
+*.ply
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store

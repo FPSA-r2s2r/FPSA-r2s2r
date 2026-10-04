@@ -1,0 +1,8 @@
+#
+# Wavefront material file
+# Converted by Meshlab Group
+#
+
+newmtl material_0
+Kd 1.000000 0.843137 0.000000
+map_Kd golden.png

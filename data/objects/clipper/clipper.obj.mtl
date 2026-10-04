@@ -1,0 +1,8 @@
+#
+# Wavefront material file
+# Converted by Meshlab Group
+#
+
+newmtl material_0
+Kd 0.156863 0.156863 0.156863
+map_Kd black.png

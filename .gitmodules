@@ -1,0 +1,6 @@
+[submodule "pybullet-egl-patch"]
+	path = pybullet-egl-patch
+	url = https://github.com/Tianyi20/pybullet-egl-patch.git
+[submodule "FPSA/slippage-preserving-reshaping"]
+	path = FPSA/slippage-preserving-reshaping
+	url = https://github.com/Tianyi20/slippage-preserving-reshaping.git

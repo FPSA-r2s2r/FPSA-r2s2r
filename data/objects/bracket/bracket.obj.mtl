@@ -1,0 +1,8 @@
+#
+# Wavefront material file
+# Converted by Meshlab Group
+#
+
+newmtl material_0
+Kd 0.000000 0.800000 0.000000
+map_Kd bracket_green.png

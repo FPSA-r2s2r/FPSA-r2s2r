@@ -1,0 +1,102 @@
+simulation: Sim_Wrench
+sim_init:
+  use_egl: true
+  offset: [0.0, 0.0, 0.0]
+  randomize_initial_ee_pose: true
+demo:
+  seed: 44
+  time_step: 1 / 120
+  record_every_n_sim_steps: 12
+  max_steps: 0
+  sleep_seconds: 0.0
+mp_collect:
+  output_root: /mnt/storage/FPSA_data/task_wrench/
+  num_episodes: 3000
+  num_processes: 10
+  base_seed: 43
+  time_step: 1 / 120
+  fps: 10
+  max_steps: 2000
+  record_every_n_sim_steps: 12
+  restart_every: 1
+make_scene:
+  env_mesh_path: ./data/background/repaired_table/tabletop.obj
+  manipulated_obj_path: ./data/objects/screw/screw_v3.obj
+  manipulated_obj_collision_path: ./data/objects/screw/screw_collision_v3.obj
+  wrench_mesh_path: data/objects/wrench/wrench.obj
+  clipper_obj_path: data/objects/clipper/clipper_v3/clipper_v3.obj
+  initial_grasp_path: data/objects/screw/wrench_engage.yaml
+  if_FPSA_tool: true
+  fpsa_tool_aug_root: data/objects/wrench/fpsa_aug_outputs
+  fpsa_tool_include_base: true
+  wrench_collision_path: null
+  base_wrench_to_tcp_pos:
+  - 0.06989
+  - 0.0
+  - 0.0
+  base_wrench_to_tcp_orn:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  obj_pose_base:
+  - 0.75
+  - -0.05
+  - 0.24
+  obj_euler_base:
+  - 0.0
+  - 0.0
+  - 0.0
+  randomize_lighting: true
+  randomize_outlscene: true
+  outlscene_xyz_jit: 0.015
+  outlscene_eul_jit: 0.001
+  randomize_plane_height: true
+  plane_height_jit: 0.002
+  randomize_wrenchpose: true
+  wrench_xyz_jitter: 0.01
+  wrench_y_euler_jitter: 0.0
+  randomize_objpose: true
+  obj_x_jit: 0.05
+  obj_y_jit: 0.1
+  obj_z_jit: 0.05
+  obj_z_eul_jit: 0.0
+  randomize_campose: true
+  cam_xyz_jit: 0.01
+  cam_eul_jit: 0.005
+  randomize_fisheye_cam: true
+  fisheye_eyz_jit: 0.005
+  fisheye_eul_jit: 0.002
+  randomize_camera_intrinsic: true
+  randomize_image_noise: true
+  randomize_object_color: true
+  randomize_robot_texture: true
+  robot_texture_patterns:
+  - checkers
+  - gradient
+  - noise
+  - plain
+  object_color_mode: bounded
+  object_color_strength: 0.5
+  randomize_wrench_color: true
+  wrench_color_mode: bounded
+  wrench_color_strength: 0.1
+  randomize_distractors: true
+  distractor_root: /mnt/storage/GoogleScannedObjects
+  distractor_num_range:
+  - 0
+  - 5
+  distractor_target_size_range:
+  - 0.1
+  - 0.5
+  distractor_workspace:
+  - - -0.2
+    - 1.3
+  - - -0.72
+    - 0.42
+  distractor_clearance: 0.08
+  distractor_path_clearance: 0.08
+  distractor_min_target_mask_pixels: 10
+collect_observation:
+  direct: false
+  use_eye_in_hand: true

@@ -1,0 +1,120 @@
+simulation: Sim_Assembly
+sim_init:
+  use_egl: true
+  offset: [0.0, 0.0, 0.0]
+  randomize_initial_ee_pose: true
+demo:
+  seed: 44
+  time_step: 1 / 120
+  record_every_n_sim_steps: 12
+  max_steps: 0
+  sleep_seconds: 0.0
+mp_collect:
+  output_root: /mnt/storage/FPSA_data/task_assembly/
+  num_episodes: 3000
+  num_processes: 10
+  base_seed: 43
+  time_step: 1 / 120
+  fps: 10
+  max_steps: 2000
+  record_every_n_sim_steps: 12
+  restart_every: 1
+make_scene:
+  env_mesh_path: ./data/background/repaired_table/tabletop.obj
+  assembly_parent_path: ./data/objects/assembly/tool/tool.obj
+  assembly_parent_collision_path: null
+  assembly_child_path: data/objects/assembly/child/assembly_child.obj
+  initial_grasp_path: data/objects/assembly/tool/tool_grasp.yaml
+  if_FPSA_tool: true
+  fpsa_tool_aug_root: data/objects/assembly/tool/fpsa_aug_outputs
+  fpsa_tool_include_base: true
+  parentobj_pose_base:
+  - 0.45
+  - -0.1
+  - 0.015
+  parentobj_euler_base:
+  - 0.0
+  - 0.0
+  - -1.5707963267948966
+  childobj_pose_base:
+  - 0.7
+  - -0.1
+  - 0.015
+  childobj_euler_base:
+  - 0.0
+  - 0.0
+  - -1.5707963267948966
+  assembly_axis_local:
+  - 0.0
+  - 0.0
+  - 1.0
+  child_to_parent_target_pos:
+  - 0.0
+  - 0.0
+  - 0.0
+  child_to_parent_target_euler:
+  - 0.0
+  - 0.0
+  - 0.0
+  safe_assembly_approach: 0.12
+  randomize_lighting: true
+  randomize_outlscene: true
+  outlscene_xyz_jit: 0.015
+  outlscene_eul_jit: 0.001
+  randomize_plane_height: true
+  plane_height_jit: 0.003
+  randomize_parent_objpose: true
+  parentobj_x_jit: 0.1
+  parentobj_y_jit: 0.15
+  parentobj_z_jit: 0.0
+  parentobj_z_eul_jit: 1.0471975511965976
+  randomize_child_objpose: true
+  childobj_x_jit: 0.1
+  childobj_y_jit: 0.15
+  childobj_z_jit: 0.0
+  childobj_z_eul_jit: 0.17453292519943295
+  randomize_campose: true
+  cam_xyz_jit: 0.01
+  cam_eul_jit: 0.005
+  randomize_fisheye_cam: true
+  fisheye_eyz_jit: 0.005
+  fisheye_eul_jit: 0.002
+  randomize_camera_intrinsic: true
+  randomize_image_noise: true
+  randomize_object_color: true
+  randomize_robot_texture: true
+  robot_texture_patterns:
+  - checkers
+  - gradient
+  - noise
+  - plain
+  object_color_mode: bounded
+  object_color_strength: 0.5
+  randomize_distractors: true
+  distractor_root: /mnt/storage/GoogleScannedObjects
+  distractor_num_range:
+  - 0
+  - 5
+  distractor_target_size_range:
+  - 0.1
+  - 0.5
+  distractor_workspace:
+  - - -0.2
+    - 1.3
+  - - -0.72
+    - 0.42
+  distractor_clearance: 0.06
+  distractor_path_clearance: 0.06
+  distractor_min_target_mask_pixels: 10
+  fix_parent_to_gripper: true
+  randomize_object_in_hand_pose: true
+  object_in_hand_x_jit: 0.02
+  object_in_hand_y_jit: 0.02
+  object_in_hand_z_jit: 0.02
+  object_in_hand_roll_jit: 0.0174533
+  object_in_hand_pitch_jit: 0.0174533
+  object_in_hand_yaw_jit: 0.0349066
+  object_in_hand_debug: false
+collect_observation:
+  direct: false
+  use_eye_in_hand: true

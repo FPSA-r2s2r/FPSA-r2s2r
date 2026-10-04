@@ -1,0 +1,61 @@
+mesh_path: /home/iadc/GeoBridge/data/objects/screw/screw.obj
+reference_frame: mesh_local_frame
+hand_frame: wrench_tool
+position_m:
+  x: -0.11417
+  y: 0.0
+  z: 0.0125
+quaternion_xyzw:
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  w: 1.0
+rpy_rad:
+  r: 0.0
+  p: -0.0
+  y: 0.0
+rpy_deg:
+  r: 0.0
+  p: -0.0
+  y: 0.0
+opening_width_m: 0.04
+finger_joint_m: 0.02
+pregrasp_opening_width_m: 0.06
+hand_tcp_offset_m:
+  x: 0.11417
+  y: 0.0
+  z: 0.0
+T_mesh_hand:
+- - 1.0
+  - 0.0
+  - 0.0
+  - -0.11417
+- - 0.0
+  - 1.0
+  - 0.0
+  - 0.0
+- - 0.0
+  - 0.0
+  - 1.0
+  - 0.0125
+- - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+T_mesh_hand_tcp:
+- - 1.0
+  - 0.0
+  - 0.0
+  - 0.0
+- - 0.0
+  - 1.0
+  - 0.0
+  - 0.0
+- - 0.0
+  - 0.0
+  - 1.0
+  - 0.0125
+- - 0.0
+  - 0.0
+  - 0.0
+  - 1.0

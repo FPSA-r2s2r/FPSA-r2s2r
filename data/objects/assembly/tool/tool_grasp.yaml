@@ -1,0 +1,61 @@
+mesh_path: /home/iadc/GeoBridge/data/objects/assembly/tool/tool.obj
+reference_frame: mesh_local_frame
+hand_frame: panda_hand
+position_m:
+  x: 0.0
+  y: -0.06500000037252902
+  z: 0.1320000001788139
+quaternion_xyzw:
+  x: 0.7071067811865476
+  y: 0.7071067811865476
+  z: -4.329780281177472e-17
+  w: 4.329780281177465e-17
+rpy_rad:
+  r: 3.141592653589793
+  p: 1.224646799147355e-16
+  y: 1.5707963267948961
+rpy_deg:
+  r: 180.0
+  p: 7.016709298534886e-15
+  y: 89.99999999999997
+opening_width_m: 0.04
+finger_joint_m: 0.02
+pregrasp_opening_width_m: 0.06
+hand_tcp_offset_m:
+  x: 0.0
+  y: 0.0
+  z: 0.1034
+T_mesh_hand:
+- - 0.0
+  - 1.0
+  - 0.0
+  - 0.0
+- - 1.0
+  - -0.0
+  - -0.0
+  - -0.065
+- - -0.0
+  - 0.0
+  - -1.0
+  - 0.132
+- - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+T_mesh_hand_tcp:
+- - 0.0
+  - 1.0
+  - 0.0
+  - 0.0
+- - 1.0
+  - -0.0
+  - -0.0
+  - -0.065
+- - -0.0
+  - 0.0
+  - -1.0
+  - 0.0286
+- - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
